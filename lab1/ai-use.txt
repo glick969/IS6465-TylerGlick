@@ -1,0 +1,10 @@
+Tools used
+
+Codespace chatbot
+    - used to import bootstrap latest version
+    - to add css formatting to home page
+    promts: 
+    1. add link to import bootstrap latest version
+    2. Can you make the two links on the home page appear on top of one another
+    
+    - i tried a few other promts but did not end up using the results

@@ -16,6 +16,18 @@ body {
     min-height: 100vh;
 }
 
+.home-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 36px;
+}
+
+.home-links a {
+    display: inline-block;
+    width: fit-content;
+}
+
 .welcome-page {
     min-height: 100vh;
     display: flex;
