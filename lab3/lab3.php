@@ -21,7 +21,7 @@ $requests = [
     ["student" => "Amina", "course" => "IS 6465", "status" => "Pending review"],
     ["student" => "Diego", "course" => "IS 6495", "status" => "Matched"]
 ];
-print_r( $requests[0]);
+print_r($requests[0]);
 
 echo '<br>';
 
@@ -33,7 +33,6 @@ foreach ($courses as $course) {
     echo htmlspecialchars($course, ENT_QUOTES, "UTF-8") . "</option>";
 }
 echo '<br>';
-
 
 
 ?>
