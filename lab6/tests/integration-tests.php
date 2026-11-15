@@ -2,6 +2,7 @@
 require_once dirname(__DIR__).'/services/requestService.php';
 $pdo=new PDO('sqlite::memory:');$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);$pdo->exec('PRAGMA foreign_keys=ON');
 $pdo->exec(file_get_contents(dirname(__DIR__).'/database/setup-database.sql'));
+$pdo->exec('DELETE FROM tutoring_requests; DELETE FROM students;');
 $failed=0;function check($ok, $label){global $failed;echo ($ok?'PASS ':'FAIL ').$label.PHP_EOL;if(!$ok)$failed++;}
 $sample=['student_name'=>'Jordan Lee','student_email'=>'jordan@example.edu','course'=>'IS 6465','reason'=>'Please help with PHP form validation.','topics'=>['Exam review','Study plan'],'preferreddate'=>(new DateTimeImmutable('+10 days'))->format('Y-m-d'),'preferredtime'=>'Morning'];
 $id=submitRequest($pdo,$sample);$r=findRequest($pdo,$id);check($r!==false&&$r['status']==='Open','UC01 create and Open');
